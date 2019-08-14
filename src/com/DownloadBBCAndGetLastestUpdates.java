@@ -27,9 +27,6 @@ public class DownloadBBCAndGetLastestUpdates {
 		FirefoxOptions options = new FirefoxOptions();
 		options.setProfile(fxProfile);
 		WebDriver driver = new FirefoxDriver(options);
-		StringBuilder sbSucess = new StringBuilder();
-		StringBuilder sbFailed = new StringBuilder();
-		int indexRun = 1;
 		String pageSource = "";
 		boolean gotIt = false;
 		try {
