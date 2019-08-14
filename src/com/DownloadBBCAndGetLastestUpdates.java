@@ -16,11 +16,14 @@ public class DownloadBBCAndGetLastestUpdates {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String linkUrl = "https://www.bbc.com/news/world/";
-		String fpHtmlContent = "/tmp/lastestUpdatesAnnie.html";
-		String fpOutListUrl="/Users/hungphan/Desktop/outLinks.txt";
-		FirefoxProfile fxProfile = new FirefoxProfile();
-		System.setProperty("webdriver.gecko.driver", "/Users/hungphan/git/translationExample/geckodriver");
+		String fopHome=System.getProperty("user.home");
+		String fpHtmlContent = fopHome+"lastestUpdatesAnnie.html";
+		String fpOutListUrl= fopHome+"outLinks.txt";
+		String fpFirefoxDriver="/Users/hungphan/git/translationExample/geckodriver";
+		System.setProperty("webdriver.gecko.driver", fpFirefoxDriver);
 		String urlBBC="https://www.bbc.com/";
+		
+		FirefoxProfile fxProfile = new FirefoxProfile();
 		FirefoxOptions options = new FirefoxOptions();
 		options.setProfile(fxProfile);
 		WebDriver driver = new FirefoxDriver(options);
